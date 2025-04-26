@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+  --primary-color: #f9532d;
+  --primary-dark: #1F252E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.container {
+  padding: 0 8.4rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  opacity: 0;
+  animation: leftSideAni 1s ease forwards;
+}
+
+.logo a {
+  color: #244D61;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  gap: .6rem;
+  list-style-type: none;
+}
+
+li a {
+  padding: .3rem 1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 36px;
+  transition: .3s;
+  opacity: 0;
+  animation: navani .3s ease forwards;
+  animation-delay: calc(.15s * var(--navAni));
+}
+
+li a.active,
+li a:hover {
+  color: var(--primary-color);
+}
+
+#click {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.mode i {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  opacity: 0;
+  animation: rightSideAni 1.5s ease forwards;
+}
+
+/* Discography Content */
+.discography-content {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.discography-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+  opacity: 0;
+  animation: topSideAni 1s ease forwards;
+}
+
+.discography {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.single {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.single iframe {
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.single iframe:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  margin: 4rem 0;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: var(--primary-dark);
+  color: #fff;
+}
+
+.dark-mode .discography-content h1 {
+  color: #fff;
+}
+
+.dark-mode header {
+  background-color: var(--primary-dark);
+  box-shadow: 0 4px 17px rgb(80 80 80 / 31%);
+}
+
+.dark-mode .logo a {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes leftSideAni {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes navani {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightSideAni {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes topSideAni {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1.6rem;
+  }
+
+  .discography-content h1 {
+    font-size: 2rem;
+  }
+
+  .discography {
+    gap: 1.5rem;
+  }
+
+  .single iframe {
+    height: 70px;
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="discography.css" />
+  <title>Viccxi - Discography</title>
+</head>
+
+<body>
+  <header class="container">
+    <div class="page-header">
+      <div class="logo">
+        <a href="#">Viccxi.</a>
+      </div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="mainicon">
+        <div class="menu"><i class="bx bx-menu"></i></div>
+      </label>
+      <ul>
+        <li><a href="intro.html" style="--navAni:1">Home</a></li>
+        <li><a href="about.html" style="--navAni:2">About</a></li>
+        <li><a href="#" class="active" style="--navAni:3">Discography</a></li>
+        <li><a href="#" style="--navAni:4">Contact</a></li>
+      </ul>
+      <label class="mode">
+        <input type="checkbox" id="darkModeToggle" />
+        <i class="bx bxs-moon"></i>
+      </label>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="discography-content">
+      <h1>Viccxi Discography</h1>
+      <div class="discography">
+        <div class="single">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/53Dp6jLW5yRB5frv8XjbqE?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="single">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4q9p5P2gQuBL2twe2EHila?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="single">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6QwAXp55b3FdeBoq1AjY22?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="single">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2DFo1V3vprq3UxDfpEgOCS?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="single">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2BCqWXl9yZ6HOjnfe3pw4Z?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Viccxi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+    const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+
+    if (isDarkMode) {
+      body.classList.add("dark-mode");
+      darkModeToggle.checked = true;
+    }
+
+    darkModeToggle.addEventListener("change", () => {
+      if (darkModeToggle.checked) {
+        body.classList.add("dark-mode");
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+  </script>
+</body>
+
+</html>

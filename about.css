@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+  --primary: #f9532d;
+  --text-dark: #333;
+  --text-muted: #555;
+  --bg-light: #fff;
+  --card-bg: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: var(--bg-light);
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #244D61;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: 0.3s ease;
+    position: relative;
+  }
+  
+  nav a.active {
+    color: var(--primary);
+  }
+  
+  nav a:hover {
+    color: var(--primary);
+  }
+  
+
+/* About Section */
+.about-section {
+  padding: 80px 24px;
+  max-width: 900px;
+  margin: auto;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  animation: fadeSlideIn 1s ease forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.about-section .container {
+  padding: 30px;
+}
+
+.about-section h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary);
+  animation: fadeSlideIn 1s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-align: justify;
+  margin-bottom: 24px;
+  animation: fadeSlideIn 1s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.about-section strong {
+  color: var(--text-dark);
+}
+
+.about-section em {
+  color: var(--primary);
+  font-style: italic;
+}
+
+/* Animasi */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 16px;
+  }
+
+  .about-section h1 {
+    font-size: 2rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
