@@ -18,18 +18,14 @@
       </div>
       <input type="checkbox" id="click" />
       <label for="click" class="mainicon">
-        <div class="menu"><i class="bx bx-menu"></i></div>
+        <div class="menu"><i class='bx bx-menu'></i></div>
       </label>
       <ul>
         <li><a href="intro.html" style="--navAni:1">Home</a></li>
         <li><a href="about.html" style="--navAni:2">About</a></li>
         <li><a href="#" class="active" style="--navAni:3">Discography</a></li>
-        <li><a href="#" style="--navAni:4">Contact</a></li>
+        <li><a href="contact.html" style="--navAni:4">Contact</a></li>
       </ul>
-      <label class="mode">
-        <input type="checkbox" id="darkModeToggle" />
-        <i class="bx bxs-moon"></i>
-      </label>
     </div>
   </header>
 
@@ -38,19 +34,22 @@
       <h1>Viccxi Discography</h1>
       <div class="discography">
         <div class="single">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/53Dp6jLW5yRB5frv8XjbqE?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/track/53Dp6jLW5yRB5frv8XjbqE?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>          <p class="description"><strong>Lepaskan</strong> (2025) - Single feat. Bitternight. Lagu tentang keberanian melepas yang telah lama menyakiti.</p>
         </div>
         <div class="single">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4q9p5P2gQuBL2twe2EHila?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/track/4q9p5P2gQuBL2twe2EHila?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <p class="description"><strong>Lasting Memory</strong> (2024) - Sebuah balada reflektif tentang memori yang tak terlupakan.</p>
         </div>
         <div class="single">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6QwAXp55b3FdeBoq1AjY22?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/track/2DFo1V3vprq3UxDfpEgOCS?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <p class="description"><strong>Fly With Me</strong> (2023) - Lagu penuh semangat tentang mengejar mimpi bersama seseorang.</p>
         </div>
         <div class="single">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2DFo1V3vprq3UxDfpEgOCS?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/track/6QwAXp55b3FdeBoq1AjY22?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <p class="description"><strong>Tak Akan Nyata</strong> (2023) - Lagu galau tentang cinta yang tidak bisa terwujud.</p>
         </div>
         <div class="single">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2BCqWXl9yZ6HOjnfe3pw4Z?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/track/2BCqWXl9yZ6HOjnfe3pw4Z?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>          <p class="description"><strong>Hey See Me</strong> (2022) - Debut single dengan pesan penuh semangat untuk tetap terlihat di tengah dunia yang sibuk.</p>
         </div>
       </div>
     </div>
@@ -70,7 +69,7 @@
       darkModeToggle.checked = true;
     }
 
-    darkModeToggle.addEventListener("change", () => {
+    darkModeToggle?.addEventListener("change", () => {
       if (darkModeToggle.checked) {
         body.classList.add("dark-mode");
         localStorage.setItem("darkMode", "enabled");

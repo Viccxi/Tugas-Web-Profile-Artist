@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="contact.css" />
+  <title>Contact - Viccxi</title>
+</head>
+
+<body>
+  <header class="container">
+    <div class="page-header">
+      <div class="logo">
+        <a href="#">Viccxi.</a>
+      </div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="mainicon">
+        <div class="menu"><i class="bx bx-menu"></i></div>
+      </label>
+      <ul>
+        <li><a href="intro.html" style="--navAni:1">Home</a></li>
+        <li><a href="about.html" style="--navAni:2">About</a></li>
+        <li><a href="discography.html" style="--navAni:3">Discography</a></li>
+        <li><a href="#" class="active" style="--navAni:4">Contact</a></li>
+      </ul>
+      <label class="mode">
+        <input type="checkbox" id="darkModeToggle" />
+        <i class="bx bxs-moon"></i>
+      </label>
+    </div>
+  </header>
+
+  <section class="container contact-section">
+    <div class="contact-box">
+      <h1>Let's Connect!</h1>
+      <p>Feel free to reach out through email.</p>
+      <a href="mailto:ovicilham123@gmail.com" class="email-link">ovicilham123@gmail.com</a>
+    </div>
+  </section>
+
+  <script>
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+    const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+
+    if (isDarkMode) {
+      body.classList.add("dark-mode");
+      darkModeToggle.checked = true;
+    }
+
+    darkModeToggle.addEventListener("change", () => {
+      if (darkModeToggle.checked) {
+        body.classList.add("dark-mode");
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+  </script>
+</body>
+
+</html>
