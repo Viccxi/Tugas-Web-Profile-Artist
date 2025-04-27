@@ -29,8 +29,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: #ffffff;
-  box-shadow: 0 4px 17px rgba(255, 255, 255, 0.1);
+  background: var(--primary-dark); /* Warna gelap untuk header */
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.3);
 }
 
 .page-header {
@@ -40,40 +40,32 @@ header {
   padding: 1rem 0;
 }
 
-.logo {
+.logo a {
+  color: #ffffff; /* Warna teks putih untuk logo */
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: 800;
-  opacity: 0;
-  animation: leftSideAni 1s ease forwards;
-}
-
-.logo a {
-  color: #244D61;
-  text-decoration: none;
 }
 
 ul {
   display: flex;
-  gap: .6rem;
+  gap: 0.6rem;
   list-style-type: none;
 }
 
 li a {
-  padding: .3rem 1rem;
-  color: #333;
+  padding: 0.3rem 1rem;
+  color: #ffffff; /* Warna teks putih untuk navigasi */
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 600;
   border-radius: 36px;
-  transition: .3s;
-  opacity: 0;
-  animation: navani .3s ease forwards;
-  animation-delay: calc(.15s * var(--navAni));
+  transition: 0.3s;
 }
 
 li a.active,
 li a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Warna oranye untuk hover dan active */
 }
 
 #click {
@@ -132,9 +124,11 @@ li a:hover {
   font-size: 1.6rem;
   text-decoration: none;
   color: #000000;
-  border: 1.6px solid #000000;
+  border: 2px solid transparent; /* Awalnya transparan */
   border-radius: 50%;
   padding: 0.4rem;
+  background: linear-gradient(var(--primary-dark), var(--primary-dark)) padding-box, 
+              linear-gradient(45deg, #f9532d, #ff7a59) border-box; /* Gradient border */
   opacity: 0;
   animation: SocialAni 1s ease forwards;
   animation-delay: calc(.2s * var(--socialAni));
@@ -144,8 +138,8 @@ li a:hover {
   color: var(--primary-dark);
   background-color: var(--primary-color);
   border-color: var(--primary-color);
-  box-shadow: 0 0 20px var(--primary-color);
-  transition: all .3s ease-in-out;
+  box-shadow: 0 0 20px var(--primary-color); /* Tambahkan shadow */
+  transition: all 0.3s ease-in-out;
 }
 
 .images img {
@@ -296,7 +290,7 @@ li a:hover {
 
 
 .welcome-box {
-  background: #1c1e21; /* warna biru gelap header */
+  background: var(--primary-dark); /* Samakan dengan warna header */
   width: 100vw; /* Full width ke kanan dan kiri */
   padding: 5rem 0; /* Padding atas dan bawah */
   border-radius: 0; /* Hilangkan border-radius untuk full width */
@@ -305,31 +299,7 @@ li a:hover {
   z-index: 2; /* Pastikan di atas video */
 }
 
-.welcome-box h1 {
-  margin: 0 0 0.5rem 0;
-  font-size: 2.5rem;
-}
-
+.welcome-box h1,
 .welcome-box p {
-  margin: 0;
-  font-size: 1.2rem;
+  color: #ffffff; /* Warna teks putih */
 }
-
-
-/* Tambahan khusus biar teks header putih */
-header ul li a {
-  color: white;
-}
-
-header ul li a:hover,
-header ul li a.active {
-  color: var(--primary-color);
-}
-
-/* Pastikan background header juga gelap */
-header {
-  background: var(--primary-dark);
-  box-shadow: 0 4px 17px rgba(80, 80, 80, 0.3);
-}
-
-/* Lainnya tetap dari CSS kamu sebelumnya */
