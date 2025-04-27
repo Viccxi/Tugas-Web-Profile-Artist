@@ -94,9 +94,9 @@ nav ul li a.active {
 
 
 .about-section p {
-  margin-bottom: 1.5rem;
-  font-size: 1.15rem;
-  color: var(--text-light);
+  text-align: justify; /* Mengatur teks agar rata kiri dan kanan */
+  line-height: 1.6; /* Menambahkan jarak antar baris */
+  margin-bottom: 1rem; /* Memberikan jarak antar paragraf */
 }
 
 
