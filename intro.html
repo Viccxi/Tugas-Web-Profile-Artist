@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="intro.css" />
-  <title>Viccxi - Music Biography</title>
+  <title>Viccxi Artist Profile</title>
 </head>
-<body>
+<body class="dark-mode">
   <div id="background"></div>
 
   <header class="container">
     <div class="page-header">
       <div class="logo">
-        <a href="#">Viccxi.</a>
+        <a href="#">Viccxi Artist Profile</a>
       </div>
       <input type="checkbox" id="click" />
       <label for="click" class="mainicon">
@@ -26,10 +26,6 @@
         <li><a href="discography.html" style="--navAni:3">Discography</a></li>
         <li><a href="contact.html" style="--navAni:4">Contact</a></li>
       </ul>
-      <label class="mode">
-        <input type="checkbox" id="darkModeToggle" />
-        <i class="bx bxs-moon"></i>
-      </label>
     </div>
   </header>
 
@@ -56,34 +52,16 @@
     </div>
   </section>
 
-  <script>
-    // Dark mode toggle
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const body = document.body;
-    const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+  <video autoplay muted loop id="bg-video">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
-    if (isDarkMode) {
-      body.classList.add("dark-mode");
-      darkModeToggle.checked = true;
-    }
-
-    darkModeToggle.addEventListener("change", () => {
-      if (darkModeToggle.checked) {
-        body.classList.add("dark-mode");
-        localStorage.setItem("darkMode", "enabled");
-      } else {
-        body.classList.remove("dark-mode");
-        localStorage.setItem("darkMode", "disabled");
-      }
-    });
-
-    // Cursor parallax effect
-    const background = document.getElementById("background");
-    document.addEventListener("mousemove", (e) => {
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      background.style.backgroundPosition = `${x}% ${y}%`;
-    });
-  </script>
+  <div class="content">
+    <div class="welcome-box">
+      <h1>Welcome to My World</h1>
+      <p>Discover the music inside.</p>
+    </div>
+  </div>
 </body>
 </html>

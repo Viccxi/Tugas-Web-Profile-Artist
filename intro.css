@@ -17,11 +17,11 @@ body {
 }
 
 .container {
-  padding: 0 8.4rem;
+  padding: 0 4.4rem;
 }
 
 .img-w {
-  width: 100%;
+  width: 120%;
   height: auto;
 }
 
@@ -154,11 +154,24 @@ li a:hover {
 
 .images {
   width: 60%;
-  margin-left: auto;
+  margin-left: 7rem;
+  margin-top: rem;
   position: relative;
+  top: 38px; /* Adjust this value to move the image down */
   opacity: 0;
-  animation: imageAni 1s ease forwards;
-  animation-delay: 1.5s;
+  animation: bottomSideAni 1s ease forwards;
+  animation-delay: 0s;
+}
+
+@keyframes bottomSideAni {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .dark-mode {
@@ -262,3 +275,59 @@ li a:hover {
     margin: auto;
   }
 }
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Biar video di belakang konten */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 0%;
+}
+
+
+.welcome-box {
+  background: #1F252E; /* warna biru gelap header */
+  display: inline-block;
+  padding: 2rem 27rem;
+  border-radius: 12px;
+  margin-top: 2rem; /* kasih jarak lebih jauh ke bawah */
+}
+
+.welcome-box h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.welcome-box p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+/* Tambahan khusus biar teks header putih */
+header ul li a {
+  color: white;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  color: var(--primary-color);
+}
+
+/* Pastikan background header juga gelap */
+header {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 17px rgba(80, 80, 80, 0.3);
+}
+
+/* Lainnya tetap dari CSS kamu sebelumnya */
