@@ -3,7 +3,7 @@
 
 :root {
   --primary-color: #f9532d;
-  --primary-dark: #1F252E;
+  --primary-dark: #1c1e21;
 }
 
 * {
@@ -296,11 +296,13 @@ li a:hover {
 
 
 .welcome-box {
-  background: #1F252E; /* warna biru gelap header */
-  display: inline-block;
-  padding: 2rem 27rem;
-  border-radius: 12px;
-  margin-top: 2rem; /* kasih jarak lebih jauh ke bawah */
+  background: #1c1e21; /* warna biru gelap header */
+  width: 100vw; /* Full width ke kanan dan kiri */
+  padding: 5rem 0; /* Padding atas dan bawah */
+  border-radius: 0; /* Hilangkan border-radius untuk full width */
+  margin-top: 2rem; /* Kasih jarak lebih jauh ke bawah */
+  position: relative; /* Pastikan posisi relatif untuk layering */
+  z-index: 2; /* Pastikan di atas video */
 }
 
 .welcome-box h1 {

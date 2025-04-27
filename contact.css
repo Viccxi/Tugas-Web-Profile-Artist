@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #f9532d;
-  --primary-dark: #1F252E;
+  --primary-dark: #1c1e21;
 }
 
 * {
@@ -23,8 +23,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: #fff;
-  box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+  background: #1e1e1e; /* Warna gelap untuk header */
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.3);
 }
 
 .page-header {
@@ -35,7 +35,7 @@ header {
 }
 
 .logo a {
-  color: #244D61;
+  color: #ffffff; /* Warna teks terang */
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 800;
@@ -45,30 +45,23 @@ header {
 
 ul {
   display: flex;
-  gap: .6rem;
+  gap: 0.6rem;
   list-style-type: none;
 }
 
 li a {
-  padding: .3rem 1rem;
-  color: #333;
+  padding: 0.3rem 1rem;
+  color: #ffffff; /* Warna teks terang */
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 600;
   border-radius: 36px;
-  transition: .3s;
-  opacity: 0;
-  animation: navani .3s ease forwards;
-  animation-delay: calc(.15s * var(--navAni));
+  transition: 0.3s;
 }
 
 li a.active,
 li a:hover {
-  color: var(--primary-color);
-}
-
-#click {
-  display: none;
+  color: #f9532d; /* Warna oranye untuk hover dan active */
 }
 
 .mode i {
@@ -103,7 +96,7 @@ li a:hover {
 .contact-box p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #ffffff;
 }
 
 .email-link {
@@ -112,7 +105,7 @@ li a:hover {
   padding: 0.6rem 1.2rem;
   border: 2px solid var(--primary-color);
   border-radius: 25px;
-  color: var(--primary-dark);
+  color: #fff; /* Ubah warna font menjadi putih */
   text-decoration: none;
   transition: .3s;
 }
@@ -199,3 +192,20 @@ li a:hover {
   }
 }
 
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Biar video di belakang konten */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 0%;
+}

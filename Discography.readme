@@ -3,3 +3,54 @@ Fly With Me:          <iframe src="https://open.spotify.com/embed/track/2DFo1V3v
 Tak Akan Nyata:           <iframe src="https://open.spotify.com/embed/track/6QwAXp55b3FdeBoq1AjY22?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 Lasting Memory:           <iframe src="https://open.spotify.com/embed/track/4q9p5P2gQuBL2twe2EHila?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 Lepaskan:           <iframe src="https://open.spotify.com/embed/track/53Dp6jLW5yRB5frv8XjbqE?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<div class="discography">
+
+        <!-- Lepaskan -->
+        <div class="single">
+          <iframe src="https://open.spotify.com/embed/track/2BCqWXl9yZ6HOjnfe3pw4Z?utm_source=generator&theme=0" loading="lazy"></iframe>
+          <div class="info">
+            <h2>Hey See Me</h2>
+            <p class="year">2022</p>
+            <p class="desc"> Bercerita tentang kerinduan seseorang yang berharap dilihat oleh orang yang dicintainya. Namun, sekeras apapun usaha dan harapannya, sosok itu tak pernah benar-benar memperhatikannya. Sebuah lagu tentang cinta yang bertepuk sebelah tangan dan rasa kehilangan yang sunyi.</p>
+          </div>
+        </div>
+
+        <!-- Lasting Memory -->
+        <div class="single">
+          <iframe src="https://open.spotify.com/embed/track/2DFo1V3vprq3UxDfpEgOCS?utm_source=generator&theme=0" loading="lazy"></iframe>
+          <div class="info">
+            <h2>Tak Akan Nyata</h2>
+            <p class="year">2023</p>
+            <p class="desc">Di "Tak Akan Nyata", Viccxi mengungkapkan hasrat untuk memiliki seseorang yang terasa begitu sempurna. Namun, perlahan disadari bahwa harapan itu hanya ilusi — sebuah keindahan yang tak akan pernah bisa digenggam. Lagu ini menghadirkan kegetiran dalam mimpi yang tak menjadi kenyataan.</p>
+          </div>
+        </div>
+
+        <!-- Fly With Me -->
+        <div class="single">
+          <iframe src="https://open.spotify.com/embed/track/6QwAXp55b3FdeBoq1AjY22?utm_source=generator&theme=0" loading="lazy"></iframe>
+          <div class="info">
+            <h2>Fly With Me</h2>
+            <p class="year">2024</p>
+            <p class="desc">"Fly With Me" adalah ajakan lembut untuk menjalani perjalanan hidup bersama. Lagu ini menceritakan tentang seseorang yang berjanji akan selalu setia menemani, apapun rintangan yang menghadang. Sebuah anthem tentang kebersamaan, komitmen, dan kepercayaan sepanjang waktu.</p>
+          </div>
+        </div>
+
+        <!-- Tak Akan Nyata -->
+        <div class="single">
+          <iframe src="https://open.spotify.com/embed/track/4q9p5P2gQuBL2twe2EHila?utm_source=generator&theme=0" loading="lazy"></iframe>
+          <div class="info">
+            <h2>Lasting Memory</h2>
+            <p class="year">2024</p>
+            <p class="desc">Di "Lasting Memory", Viccxi mengajak kita mengingat momen-momen abadi bersama seseorang yang kini telah pergi. Lagu ini menghidupkan perasaan rindu yang dalam, serta betapa kuatnya kenangan itu bertahan, bahkan saat sosoknya sudah tiada.</p>
+          </div>
+        </div>
+
+        <!-- Hey See Me -->
+        <div class="single">
+          <iframe src="https://open.spotify.com/embed/track/53Dp6jLW5yRB5frv8XjbqE?utm_source=generator&theme=0" loading="lazy"></iframe>
+          <div class="info">
+            <h2>Lepaskan (Feat. Viccxi)</h2>
+            <p class="year">2025</p>
+            <p class="desc">"Lepaskan" adalah kisah tentang berani merelakan. Setelah sekian lama bertahan dalam luka dan kecewa, akhirnya keputusan diambil untuk melepaskan orang yang dulu begitu dicintai. Lagu ini membawa nuansa emosi yang dalam, antara kesedihan dan kelegaan.</p>
+          </div>
