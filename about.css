@@ -143,3 +143,17 @@ header {
     gap: 20px;
   }
 }
+
+/* filepath: c:\Users\ASUS\Documents\Opek\Praktikum Pemograman Web\Web Profile\about.css */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+header.dark-mode {
+  background-color: #1e1e1e;
+}
+
+nav.dark-mode a {
+  color: #ffffff;
+}

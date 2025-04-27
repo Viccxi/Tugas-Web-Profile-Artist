@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,8 +8,9 @@
   <link rel="stylesheet" href="intro.css" />
   <title>Viccxi - Music Biography</title>
 </head>
-
 <body>
+  <div id="background"></div>
+
   <header class="container">
     <div class="page-header">
       <div class="logo">
@@ -57,6 +57,7 @@
   </section>
 
   <script>
+    // Dark mode toggle
     const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
     const isDarkMode = localStorage.getItem("darkMode") === "enabled";
@@ -75,7 +76,14 @@
         localStorage.setItem("darkMode", "disabled");
       }
     });
+
+    // Cursor parallax effect
+    const background = document.getElementById("background");
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      background.style.backgroundPosition = `${x}% ${y}%`;
+    });
   </script>
 </body>
-
 </html>

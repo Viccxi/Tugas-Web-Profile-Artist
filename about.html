@@ -18,7 +18,10 @@
             <li><a href="discography.html">Discography</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          
+          <label class="mode">
+            <input type="checkbox" id="darkModeToggle" />
+            <i class="bx bxs-moon"></i>
+          </label>
         </nav>
       </header>
       
@@ -37,5 +40,26 @@
       <p>– Viccxi</p>
     </div>
   </section>
+
+  <script>
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+    const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+
+    if (isDarkMode) {
+      body.classList.add("dark-mode");
+      darkModeToggle.checked = true;
+    }
+
+    darkModeToggle.addEventListener("change", () => {
+      if (darkModeToggle.checked) {
+        body.classList.add("dark-mode");
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+  </script>
 </body>
 </html>
