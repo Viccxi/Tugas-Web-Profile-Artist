@@ -3,7 +3,7 @@
 
 :root {
   --primary-color: #f9532d;
-  --primary-dark: #1c1e21;
+  --primary-dark: #1e1e1e;
 }
 
 * {
@@ -27,8 +27,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: #ffffff;
-  box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+  background: var(--primary-dark); /* Warna gelap untuk header */
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.3);
 }
 
 .page-header {
@@ -38,40 +38,32 @@ header {
   padding: 1rem 0;
 }
 
-.logo {
+.logo a {
+  color: #ffffff; /* Warna teks putih */
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: 800;
-  opacity: 0;
-  animation: leftSideAni 1s ease forwards;
-}
-
-.logo a {
-  color: #244D61;
-  text-decoration: none;
 }
 
 ul {
   display: flex;
-  gap: .6rem;
+  gap: 0.6rem;
   list-style-type: none;
 }
 
 li a {
-  padding: .3rem 1rem;
-  color: #333;
+  padding: 0.3rem 1rem;
+  color: #ffffff; /* Warna teks putih */
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 600;
   border-radius: 36px;
-  transition: .3s;
-  opacity: 0;
-  animation: navani .3s ease forwards;
-  animation-delay: calc(.15s * var(--navAni));
+  transition: 0.3s;
 }
 
 li a.active,
 li a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Warna oranye untuk hover dan active */
 }
 
 #click {
@@ -99,8 +91,8 @@ li a:hover {
 .discography-content h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--primary-dark);
-  opacity: 0;
+  color: var(--primary-color); /* Pastikan warna oranye diterapkan */
+  opacity: 1; /* Pastikan teks terlihat */
   animation: topSideAni 1s ease forwards;
 }
 
@@ -169,7 +161,9 @@ li a:hover {
 }
 
 .single .info .year {
-  color: #f9532d; /* Warna oranye untuk tahun */
+  color: var(--primary-color); /* Warna oranye */
+  font-weight: 700; /* Buat font menjadi tebal */
+  font-size: 1rem; /* Pastikan ukuran font tetap proporsional */
 }
 
 .desc.full {
@@ -218,7 +212,7 @@ footer {
 }
 
 .dark-mode .discography-content h1 {
-  color: #fff;
+  color: var(--primary-color); /* Tetap gunakan warna oranye */
 }
 
 .dark-mode header {
