@@ -77,7 +77,7 @@ nav ul li a.active {
   margin: auto;
   background-color: var(--card-bg);
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.06);
   animation: fadeSlideIn 1s ease forwards;
   opacity: 0;
   transform: translateY(40px);
@@ -97,6 +97,7 @@ nav ul li a.active {
   text-align: justify; /* Mengatur teks agar rata kiri dan kanan */
   line-height: 1.6; /* Menambahkan jarak antar baris */
   margin-bottom: 1rem; /* Memberikan jarak antar paragraf */
+  color: var(--text-light); /* Pastikan warna teks putih */
 }
 
 
