@@ -1,0 +1,64 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e; /* Warna latar belakang */
+    color: #ffffff; /* Warna teks */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f9532d; /* Warna oranye */
+}
+
+.container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f9532d; /* Warna oranye */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    background: #ff7043; /* Warna oranye lebih terang */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu a:active {
+    transform: scale(0.98); /* Efek klik */
+}

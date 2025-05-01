@@ -1,3 +1,59 @@
+<?php
+session_start();
+require_once('includes/db_connect.php');
+
+// Dapatkan IP dan User Agent
+$ip_address = $_SERVER['REMOTE_ADDR'];
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+// Deteksi OS
+function getOS($user_agent) {
+    $os_array = array(
+        '/windows nt 10/i'     => 'Windows 10',
+        '/windows nt 6.3/i'    => 'Windows 8.1',
+        '/windows nt 6.2/i'    => 'Windows 8',
+        '/windows nt 6.1/i'    => 'Windows 7',
+        '/macintosh|mac os x/i' => 'Mac OS X',
+        '/linux/i'             => 'Linux',
+        '/android/i'           => 'Android',
+        '/iphone/i'            => 'iOS',
+    );
+    foreach ($os_array as $regex => $value) {
+        if (preg_match($regex, $user_agent)) {
+            return $value;
+        }
+    }
+    return "Unknown OS";
+}
+
+// Deteksi Browser
+function getBrowser($user_agent) {
+    $browser_array = array(
+        '/msie/i'       => 'Internet Explorer',
+        '/firefox/i'    => 'Firefox',
+        '/chrome/i'     => 'Chrome',
+        '/safari/i'     => 'Safari',
+        '/opera/i'      => 'Opera',
+        '/edg/i'        => 'Edge',
+    );
+    foreach ($browser_array as $regex => $value) {
+        if (preg_match($regex, $user_agent)) {
+            return $value;
+        }
+    }
+    return "Unknown Browser";
+}
+
+$os = getOS($user_agent);
+$browser = getBrowser($user_agent);
+
+// Simpan ke database
+$sql = "INSERT INTO pengunjung (ip_address, os, browser, user_agent) 
+        VALUES ('$ip_address', '$os', '$browser', '$user_agent')";
+mysqli_query($conn, $sql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

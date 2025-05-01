@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e; /* Warna latar belakang */
+    color: #ffffff; /* Warna teks */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f9532d; /* Warna oranye */
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px #f9532d;
+}
+
+.container button {
+    background: #f9532d; /* Warna oranye */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.container button:hover {
+    background: #ff7043; /* Warna oranye lebih terang */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container a {
+    color: #2d89f9; /* Warna biru */
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.container a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
