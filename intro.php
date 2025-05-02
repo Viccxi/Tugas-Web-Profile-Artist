@@ -119,5 +119,8 @@ mysqli_query($conn, $sql);
       <p>Discover the music inside.</p>
     </div>
   </div>
+  <div class="cursor"></div>
+<div class="cursor-trail"></div>
+<script src="js/cursor.js" defer></script>
 </body>
 </html>

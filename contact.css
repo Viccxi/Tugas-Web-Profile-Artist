@@ -209,3 +209,57 @@ li a:hover {
   text-align: center;
   padding-top: 0%;
 }
+
+/* Kursor utama */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #f9532d; /* Warna oranye */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  transition: transform 0.1s ease-out;
+}
+
+/* Jejak kursor */
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(249, 83, 45, 0.3); /* Warna oranye transparan */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  transition: transform 0.2s ease-out;
+}
+
+.cursor, .cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+.cursor {
+  width: 10px;
+  height: 10px;
+  background: #ff6f61;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+.cursor-trail {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 111, 97, 0.2);
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out;
+  backdrop-filter: blur(3px);
+}
